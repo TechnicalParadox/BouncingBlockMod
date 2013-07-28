@@ -1,1 +1,3 @@
-Source code of the Bouncing Block Mod
+Bouncing Block Mod
+==========
+Source code, textures, etc. of the Bouncing Block Mod
