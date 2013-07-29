@@ -1,0 +1,16 @@
+[
+{
+"modid":"bouncingblockmod",
+"name": "Bouncing Block Mod",
+"description": "Adds a Bouncing Block that pushes you up slightly over 32 blocks to the game and Padding Block, Great for Elevators!",
+"version": "1.1",
+"mcversion": "1.6.2",
+"logoFile": "/techlogo.png",
+"url": "http://youtube.com/technicalparadox",
+"authors": ["TechnicalParadox"],
+"credits": "Made by TechnicalParadox",
+"parent": "",
+"screenshots": [],
+"dependencies": ["mod_MinecraftForge"]
+}
+]
