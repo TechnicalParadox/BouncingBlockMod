@@ -1,0 +1,8 @@
+PLANNED
+Change required tool from axe to shear.
+Add a Config for how high you jump.
+Change padding block or bouncing block, maybe both to half slabs.
+
+DONE
+No damage if you fall onto the block - Done
+Add a padding block - Done
