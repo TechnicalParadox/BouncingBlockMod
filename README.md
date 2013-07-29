@@ -1,6 +1,6 @@
 Bouncing Block Mod
 ==========
-Source code, textures, etc. of the Bouncing Block Mod
+Source code, textures, etc. of the Bouncing Block Mod Provided to you to help make the Mod better :)
 Do NOT redistribute any of this code as your own.
 Do NOT post any download links to the mod.
 If you would like to share this mod, post a Link to the Minecraft Forum Topic.
