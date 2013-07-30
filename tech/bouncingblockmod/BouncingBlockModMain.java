@@ -23,14 +23,10 @@ public class BouncingBlockModMain {
 	// Item IDs
 	int bouncingBlockID;
 	int paddingBlockID;
-	int minecraftShearsID;
 	
 	// Blocks
 	public static BouncingBlock bouncingBlock;
 	public static PaddingBlock paddingBlock;
-	
-	// Minecraft shears so we can harvest with them
-	public static ItemShears minecraftShears;
 	
 	// Instance of Mod
 	public static BouncingBlockModMain instance;
@@ -48,9 +44,6 @@ public class BouncingBlockModMain {
 		// Get Block IDs from config file
 		bouncingBlockID = config.get("Block IDs", "Bouncing Block ID", 1475).getInt();
 		paddingBlockID = config.get("Block IDs", "Padding Block ID", 1476).getInt();
-		
-		// Get Item IDs from config file
-		minecraftShearsID = config.get("Item IDs", "Minecraft Shears ID", 359).getInt();
 		
 		// Save config
 		config.save();
