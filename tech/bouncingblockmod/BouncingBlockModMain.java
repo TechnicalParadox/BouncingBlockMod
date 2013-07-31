@@ -15,7 +15,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 // Info for Minecraft Forge
-@Mod (modid="bouncingblockmod", name="Bouncing Block Mod", version="1.5 for MC 1.6.2 - FORGE 9.10.0.789")
+@Mod (modid="bouncingblockmod", name="Bouncing Block Mod", version="1.5 for MC 1.6.2 - FORGE 9.10.0.804")
 @NetworkMod (clientSideRequired=true, serverSideRequired=false)
 
 public class BouncingBlockModMain {
