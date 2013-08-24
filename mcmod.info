@@ -2,13 +2,13 @@
 {
 "modid":"bouncingblockmod",
 "name": "Bouncing Block Mod",
-"description": "Adds the Bouncing Block and the Padding Block.",
-"version": "1.5",
+"description": "Adds new blocks to the game that enable even more possibilites!.",
+"version": "1.6",
 "mcversion": "1.6.2",
-"logoFile": "/techlogo.png",
+"logoFile": "techlogo.png",
 "url": "http://adf.ly/T0K1G",
 "authors": ["TechnicalParadox"],
-"credits": "Made by TechnicalParadox",
+"credits": "Textures and code by TechnicalParadox",
 "parent": "",
 "screenshots": [],
 "dependencies": ["mod_MinecraftForge"]

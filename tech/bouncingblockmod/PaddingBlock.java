@@ -16,13 +16,13 @@ public class PaddingBlock extends Block
 		
 		// Variables for Block
 		this.setHardness(1.0F);
-		this.setStepSound(Block.soundSnowFootstep);
+		this.setStepSound(Block.soundClothFootstep);
 		this.setUnlocalizedName("paddingBlock");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setResistance(1.0F);
 	}
 	
-	// Block Texture
+	// Texture
 	public void registerIcons(IconRegister reg)
 	{
 		this.blockIcon = reg.registerIcon("bouncingblockmod:padding_block");
@@ -31,7 +31,7 @@ public class PaddingBlock extends Block
 	// Stops fall damage
 	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity par5Entity, float par6)
 	{
-		par5Entity.fallDistance=0;
+		par5Entity.fallDistance = 0;
 	}
 
 }

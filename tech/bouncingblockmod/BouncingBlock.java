@@ -9,6 +9,9 @@ import net.minecraft.world.World;
 
 public class BouncingBlock extends Block
 {
+	// Integers required for the bouncing mechanic
+	double FallDistance;
+	double BounceHeight;
 
 	public BouncingBlock(int bouncingBlockID, Material par2Material)
 	{
@@ -16,7 +19,7 @@ public class BouncingBlock extends Block
 		
 		// Variables for Block
 		this.setHardness(1.0F);
-		this.setStepSound(Block.soundSnowFootstep);
+		this.setStepSound(Block.soundClothFootstep);
 		this.setUnlocalizedName("bouncingBlock");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setResistance(1.0F);
@@ -27,18 +30,20 @@ public class BouncingBlock extends Block
 	{
 		this.blockIcon = reg.registerIcon("bouncingblockmod:bouncing_block");
 	}
-
-	// Causes the Player to bounce when the block is stepped on
-	public void onEntityWalking(World par1World, int par2, int par3, int par4, Entity par5Entity)
-	{
-		par5Entity.motionY += 2.9d;
-	}
 	
-	// Causes the Player to bounce and not take fall damage when fallen on
+	// Causes the Player to not take fall damage and bounce when fallen on
 	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity par5Entity, float par6)
 	{
-		par5Entity.motionY += 2.9d;
-		par5Entity.fallDistance=0;
+		FallDistance = par5Entity.fallDistance;
+		
+		par5Entity.fallDistance = 0;
+		
+		BounceHeight = FallDistance + .1;
+		if (BounceHeight >= 2.9) {
+			BounceHeight = 2.9;
+		}
+		
+		par5Entity.motionY += BounceHeight;
 	}
 	
 }
