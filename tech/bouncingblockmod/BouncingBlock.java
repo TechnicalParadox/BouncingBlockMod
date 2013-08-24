@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public class BouncingBlock extends Block
 {
-	// Integers required for the bouncing mechanic
+	// Doubles required for the bouncing mechanic
 	double FallDistance;
 	double BounceHeight;
 
