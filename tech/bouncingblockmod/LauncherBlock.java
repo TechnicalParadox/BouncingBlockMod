@@ -31,7 +31,13 @@ public class LauncherBlock extends Block
 	// Causes the Player to launch when the block is stepped on
 	public void onEntityWalking(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
-		par5Entity.motionY += 2.9;
+		par5Entity.motionY = 2.9;
+	}
+	
+	// Causes the Player to launch when the block is fallen on
+	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity par5Entity, float par6)
+	{
+		par5Entity.motionY = 2.9;
 	}
 	
 }
