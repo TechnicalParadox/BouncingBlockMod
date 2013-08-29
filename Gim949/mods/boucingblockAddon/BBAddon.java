@@ -98,7 +98,7 @@ public class BBAddon extends BouncingBlockModMain{
 	/**
 	 * Class must stay private in order to stay hidden from other class files. 
 	 * This class is only used in BBAddon.java
-	 * @author Przemek
+	 * @author Gim949
 	 *
 	 */
 	private class BBCommand implements ICommand{
