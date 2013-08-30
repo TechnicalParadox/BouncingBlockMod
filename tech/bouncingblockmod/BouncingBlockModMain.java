@@ -148,43 +148,38 @@ public class BouncingBlockModMain {
 					"isi",
 					"ipi",
 					"iri",
-					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneIdle, 's', Block.pressurePlateIron);
+					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
 			// Cannon Block - North
 			GameRegistry.addRecipe(new ItemStack(cannonBlockNorth, 3),
 					"sps",
 					"iri",
 					"iii",
-					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneIdle, 's', Block.pressurePlateIron);
+					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
 			// Cannon Block - East
 			GameRegistry.addRecipe(new ItemStack(cannonBlockEast, 3),
 					"iis",
 					"irp",
 					"iis",
-					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneIdle, 's', Block.pressurePlateIron);
+					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
 			// Cannon Block - South
 			GameRegistry.addRecipe(new ItemStack(cannonBlockSouth, 3),
 					"iii",
 					"iri",
 					"sps",
-					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneIdle, 's', Block.pressurePlateIron);
+					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
 			// Cannon Block - West
 			GameRegistry.addRecipe(new ItemStack(cannonBlockWest, 3),
 					"sii",
 					"pri",
 					"sii",
-					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneIdle, 's', Block.pressurePlateIron);
+					'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
 			// Speed Block - Recipe 1
 			GameRegistry.addRecipe(new ItemStack(speedBlock, 3),
 					"iii",
 					"sss",
 					"sss",
 					'i', Block.ice, 's', Item.snowball);
-			// Speed Block - Recipe 2
-			GameRegistry.addRecipe(new ItemStack(speedBlock, 3),
-					"sss",
-					"sls",
-					"sss",
-					's', Block.snow, 'l', (new ItemStack(Item.dyePowder, 1, 4)));
+
 	}
 	
 }
