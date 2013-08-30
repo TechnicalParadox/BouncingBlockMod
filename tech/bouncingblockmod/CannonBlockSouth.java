@@ -1,4 +1,4 @@
-package Gim949.mods.boucingblockAddon;
+package tech.bouncingblockmod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -11,33 +11,34 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockCannonSouth extends Block{
+public class CannonBlockSouth extends Block{
 	private Reference ref;
 	
-	public BlockCannonSouth(int par1, Material par2Material) {
+	public CannonBlockSouth(int par1, Material par2Material) {
 		super(par1, par2Material);
 		
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setUnlocalizedName("cannonBlockSouth");
 		this.setHardness(1.0F);
-		this.setResistance(1.0F);
-		this.setStepSound(Block.soundClothFootstep);
+		this.setResistance(2.0F);
+		this.setStepSound(Block.soundMetalFootstep);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister icon){
-		this.blockIcon = icon.registerIcon("bouncingblockmod:cannon_Block");
+		this.blockIcon = icon.registerIcon("bouncingblockmod:cannon_blockSouth");
 	}
 	
 	public void onEntityWalking(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
-		par5Entity.motionY = 1.5;
+		par5Entity.motionY = 2.5;
 		par5Entity.motionZ = 2.5;
 	}
 	
 	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity par5Entity, float par6)
 	{
-		par5Entity.fallDistance = 0;
+		par5Entity.motionY = 2.5;
+		par5Entity.motionZ = 2.5;
 	}
 	
 }
