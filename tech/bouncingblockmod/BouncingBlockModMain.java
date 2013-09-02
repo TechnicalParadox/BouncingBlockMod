@@ -1,13 +1,25 @@
-/*
+/**
  * The Bouncing Block Mod was made in a joint effort by TechnicalParadox & Gim949
  * "This mod adds new blocks to the game that allow for even more possibilities in
  * the world of Minecraft!"
+ * @author TechnicalParadox & Gim949
  */
 
 package tech.bouncingblockmod;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import tech.bouncingblockmod.block.BouncingBlock;
+import tech.bouncingblockmod.block.CannonBlock;
+import tech.bouncingblockmod.block.CannonBlockEast;
+import tech.bouncingblockmod.block.CannonBlockNorth;
+import tech.bouncingblockmod.block.CannonBlockSouth;
+import tech.bouncingblockmod.block.CannonBlockWest;
+import tech.bouncingblockmod.block.LauncherBlock;
+import tech.bouncingblockmod.block.PaddingBlock;
+import tech.bouncingblockmod.block.SpeedBlock;
+
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -23,6 +35,7 @@ import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -42,6 +55,7 @@ public class BouncingBlockModMain {
 	int cannonBlockEastID;
 	int cannonBlockSouthID;
 	int cannonBlockWestID;
+	int cannonBlockID;
 	
 	// Blocks
 	public static BouncingBlock bouncingBlock;
@@ -52,6 +66,7 @@ public class BouncingBlockModMain {
 	public static CannonBlockEast cannonBlockEast;
 	public static CannonBlockSouth cannonBlockSouth;
 	public static CannonBlockWest cannonBlockWest;
+	public static CannonBlock cannonBlock;
 	
 	// Instance of Mod
 	public static BouncingBlockModMain instance;
@@ -75,6 +90,7 @@ public class BouncingBlockModMain {
 		cannonBlockEastID = config.get("Block IDs", "Cannon Block East ID", 1480).getInt();
 		cannonBlockSouthID = config.get("Block IDs", "Cannon Block South ID", 1481).getInt();
 		cannonBlockWestID = config.get("Block IDs", "Cannon Block West ID", 1482).getInt();
+		cannonBlockID = config.get("Block IDs", "Cannon Block ID", 1483).getInt();
 		
 		// Save config
 		config.save();
@@ -88,6 +104,7 @@ public class BouncingBlockModMain {
 		this.cannonBlockEast = new CannonBlockEast (cannonBlockEastID, Material.ground);
 		this.cannonBlockSouth = new CannonBlockSouth (cannonBlockSouthID, Material.ground);
 		this.cannonBlockWest = new CannonBlockWest (cannonBlockWestID, Material.ground);
+		this.cannonBlock = new CannonBlock(cannonBlockID, Material.ground);
 		
 		// Information needed for the Bouncing Block
 		LanguageRegistry.addName(bouncingBlock, "Bouncing Block");
@@ -128,6 +145,11 @@ public class BouncingBlockModMain {
 		LanguageRegistry.addName(cannonBlockWest, "Cannon Block - West");
 		MinecraftForge.setBlockHarvestLevel(cannonBlockWest, "anything", 0);
 		GameRegistry.registerBlock(cannonBlockWest, "cannonBlockWest");
+		
+		// Information needed for the Cannon Block- West
+		LanguageRegistry.addName(cannonBlock, "Cannon Block");
+		MinecraftForge.setBlockHarvestLevel(cannonBlock, "anything", 0);
+		GameRegistry.registerBlock(cannonBlock, "cannonBlock");
 		
 		// Crafting Recipes
 			// Bouncing Block
@@ -180,6 +202,73 @@ public class BouncingBlockModMain {
 					"sss",
 					'i', Block.ice, 's', Item.snowball);
 
+	}
+	
+	@EventHandler
+	public void serverStarting(FMLServerStartingEvent event){
+		event.registerServerCommand(new BBCommand());
+	}
+	
+	public class BBCommand implements ICommand{
+		public List commands;
+		
+		@Override
+		public int compareTo(Object o) {
+			return 0;
+		}
+
+		/**
+		 * The name of the command
+		 */
+		@Override
+		public String getCommandName() {
+			return "bouncingblocks";
+		}
+
+		/**
+		 * Displays the usage and in /help
+		 */
+		@Override
+		public String getCommandUsage(ICommandSender icommandsender) {
+			return "/bouncingblocks Tells what version of the Bouncing blocks mod you have (Allias: /bb)";
+		}
+
+		/**
+		 * Our main command (bouncingblocks) and an allias to the main command (bb)
+		 */
+		@Override
+		public List getCommandAliases() {
+			commands = new ArrayList();
+			commands.add("bouncingblocks");
+			commands.add("bb");
+			
+			return this.commands;
+		}
+
+		/**
+		 * Executing the command
+		 */
+		@Override
+		public void processCommand(ICommandSender icommandsender, String[] astring) {
+			icommandsender.sendChatToPlayer(ChatMessageComponent.func_111066_d(Accessors.getProcessCommand()));
+		}
+
+		@Override
+		public boolean canCommandSenderUseCommand(ICommandSender icommandsender) {
+			//Always keep true
+			return true;
+		}
+
+		@Override
+		public List addTabCompletionOptions(ICommandSender icommandsender, String[] astring) {
+			return null;
+		}
+
+		@Override
+		public boolean isUsernameIndex(String[] astring, int i) {
+			return false;
+		}
+		
 	}
 	
 }
