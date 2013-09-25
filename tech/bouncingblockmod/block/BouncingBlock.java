@@ -1,43 +1,34 @@
 package tech.bouncingblockmod.block;
 
-import tech.bouncingblockmod.Accessors;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
+import tech.bouncingblockmod.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class BouncingBlock extends Block
-{
-	public BouncingBlock(int bouncingBlockID, Material par2Material)
+public class BouncingBlock extends BlockBounce
+{	
+	public BouncingBlock(int bouncingBlockID)
 	{
-		super(bouncingBlockID, par2Material);
-		
-		// Variables for Block
-		this.setHardness(1.0F);
-		this.setStepSound(Block.soundClothFootstep);
-		this.setUnlocalizedName("bouncingBlock");
-		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setResistance(1.0F);
+		super(bouncingBlockID);
 	}
 	
-	// Texture
+	@SideOnly(Side.CLIENT)
+	@Override
 	public void registerIcons(IconRegister reg)
 	{
-		this.blockIcon = reg.registerIcon("bouncingblockmod:bouncing_block");
+		this.blockIcon = reg.registerIcon(Reference.getResFolder() + "bouncing_block");
 	}
 	
-	// Causes the Player to launch when block is stepped on
 	public void onEntityWalking(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
-		Accessors.setUpwardVelocity(1.5F, par5Entity);
+		this.setUpwardVelocity(1.5F, par5Entity);
 	}
 	
-	// Causes the Player to not take fall damage when fallen on
 	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity par5Entity, float par6)
 	{
-		Accessors.setUpwardVelocity(1.5F, par5Entity);
+		this.setUpwardVelocity(1.5F, par5Entity);
 	}
 	
 }

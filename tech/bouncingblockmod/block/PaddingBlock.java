@@ -1,5 +1,8 @@
 package tech.bouncingblockmod.block;
 
+import tech.bouncingblockmod.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -7,28 +10,20 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
 
-public class PaddingBlock extends Block
+public class PaddingBlock extends BlockBounce
 {
-
-	public PaddingBlock(int paddingBlockID, Material par2Material)
+	public PaddingBlock(int paddingBlockID)
 	{
-		super(paddingBlockID, par2Material);
-		
-		// Variables for Block
-		this.setHardness(1.0F);
-		this.setStepSound(Block.soundClothFootstep);
-		this.setUnlocalizedName("paddingBlock");
-		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setResistance(1.0F);
+		super(paddingBlockID);
 	}
 	
-	// Texture
+	@SideOnly(Side.CLIENT)
+	@Override
 	public void registerIcons(IconRegister reg)
 	{
-		this.blockIcon = reg.registerIcon("bouncingblockmod:padding_block");
+		this.blockIcon = reg.registerIcon(Reference.getResFolder() + "padding_block");
 	}
 	
-	// Stops fall damage
 	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity par5Entity, float par6)
 	{
 		par5Entity.fallDistance = 0;
