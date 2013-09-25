@@ -1,23 +1,23 @@
 package tech.bouncingblockmod.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
+import tech.bouncingblockmod.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class SpeedBlock extends Block{
+public class SpeedBlock extends BlockBounce{
 
-	public SpeedBlock(int par1, Material par2Material) {
-		super(par1, par2Material);
+	public SpeedBlock(int par1) {
+		super(par1);
 		//Don't go above 10.0F. May crash game
 		this.slipperiness = 1.5F;
-		this.setUnlocalizedName("blockspeedy");
-		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setStepSound(soundGlassFootstep);
 		this.setResistance(0.5F);
 	}
 	
+	@SideOnly(Side.CLIENT)
+	@Override
 	public void registerIcons(IconRegister icon){
-		this.blockIcon = icon.registerIcon("bouncingblockmod:speed_Block");
+		this.blockIcon = icon.registerIcon(Reference.getResFolder() + "speed_Block");
 	}
 }
