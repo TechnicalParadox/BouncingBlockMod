@@ -150,7 +150,7 @@ public class bouncingblocks {
 		 */
 		@Override
 		public void processCommand(ICommandSender icommandsender, String[] astring) {
-//			icommandsender.sendChatToPlayer(ChatMessageComponent.func_111066_d("\2478Bouncing block Mod Version: " + Reference.MOD_VERSION));
+			icommandsender.sendChatToPlayer(ChatMessageComponent.createFromTranslationKey("\2478Bouncing block Mod Version: " + Reference.MOD_VERSION));
 		}
 
 		@Override
