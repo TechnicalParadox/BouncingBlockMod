@@ -1,0 +1,6 @@
+tile.bouncingBlock.name=Bouncing Block
+tile.paddingBlock.name=Padding Block
+tile.launcherBlock.name=Launcher Block
+tile.speedBlock.name=Speed Block
+tile.cannonBlock.name=Cannon Block
+itemGroup.tabBounce=Bouncing Blocks

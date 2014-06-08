@@ -1,16 +1,15 @@
 [
 {
-"modid":"bouncingblockmod",
-"name": "Bouncing Block Mod",
-"description": "Adds new blocks to the game that enable even more possibilites!.",
-"version": "2.0",
-"mcversion": "1.6.2",
-"logoFile": "logo.png",
-"url": "http://adf.ly/T0K1G",
-"authors": ["TechnicalParadox", "Gim949"],
+"modid": "Bouncing Blocks",
+"name": "Bouncing Blocks",
+"description": "Adds new blocks to the game that enable even more possibilites!",
+"version": "v3.0",
+"mcversion": "1.7.2",
+"url": "http://www.planetminecraft.com/mod/bouncing-block-mod/",
+"updateurl": "",
+"authorList": ["TechnicalParadox", "Gim949"],
 "credits": "TechnicalParadox and Gim949",
-"parent": "",
 "screenshots": [],
-"dependencies": ["mod_MinecraftForge"]
+"dependencies": []
 }
 ]
