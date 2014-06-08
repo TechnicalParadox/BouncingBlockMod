@@ -20,13 +20,13 @@ public class CannonBlockWest extends BlockBounce{
 	
 	public void onEntityWalking(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
-		this.setLaunchVelocityWest(2.5F, -2.5F, par5Entity);
+		this.setLaunchVelocityWest(2.5F, 2.5F, par5Entity);
 		
 	}
 	
 	public void onFallenUpon(World par1World, int par2, int par3, int par4, Entity par5Entity, float par6)
 	{
-		this.setLaunchVelocityWest(2.5F, -2.5F, par5Entity);
+		this.setLaunchVelocityWest(2.5F, 2.5F, par5Entity);
 	}
 	
 }

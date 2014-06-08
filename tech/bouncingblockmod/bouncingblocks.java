@@ -3,9 +3,12 @@ package tech.bouncingblockmod;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatMessageComponent;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -24,7 +27,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  */
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-public class bouncingblocks { //Recipes!!!!!
+public class bouncingblocks {
 	
 	//Adds a new creative tab to the game
 	public static CreativeTabs tab = new TabBounce(CreativeTabs.getNextID(), Reference.MOD_NAME);
@@ -34,6 +37,57 @@ public class bouncingblocks { //Recipes!!!!!
 		BBConfig.Config(event);
 		
 		BBBlocks.registers();
+		
+		// Crafting Recipes
+		// Bouncing Block
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.bouncingBlock, 3),
+				"xsx",
+				"sys",
+				"xsx",
+				'x', new ItemStack(Block.cloth, 1, 15), 's', Item.silk, 'y', Item.slimeBall
+				);
+		// Padding Block
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.paddingBlock, 3),
+				"zsz",
+				"szs",
+				"zsz",
+				'z', new ItemStack(Block.cloth, 1, 0), 's', Item.silk);
+		// Launcher Block
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.launcherBlock, 3),
+				"isi",
+				"ipi",
+				"iri",
+				'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
+		// Cannon Block - North
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.cannonBlockNorth, 3),
+				"sps",
+				"iri",
+				"iii",
+				'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
+		// Cannon Block - East
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.cannonBlockEast, 3),
+				"iis",
+				"irp",
+				"iis",
+				'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
+		// Cannon Block - South
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.cannonBlockSouth, 3),
+				"iii",
+				"iri",
+				"sps",
+				'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
+		// Cannon Block - West
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.cannonBlockWest, 3),
+				"sii",
+				"pri",
+				"sii",
+				'i', Item.ingotIron, 'p', Block.pistonBase, 'r', Block.torchRedstoneActive, 's', Block.pressurePlateIron);
+		// Speed Block - Recipe 1
+		GameRegistry.addRecipe(new ItemStack(BBBlocks.speedBlock, 3),
+				"iii",
+				"sss",
+				"sss",
+				'i', Block.ice, 's', Item.snowball);
 	}
 	
 	/**
@@ -96,7 +150,7 @@ public class bouncingblocks { //Recipes!!!!!
 		 */
 		@Override
 		public void processCommand(ICommandSender icommandsender, String[] astring) {
-			icommandsender.sendChatToPlayer(ChatMessageComponent.func_111066_d("\2478Bouncing block Mod Version: " + Reference.MOD_VERSION));
+			icommandsender.sendChatToPlayer(ChatMessageComponent.createFromTranslationKey("\2478Bouncing block Mod Version: " + Reference.MOD_VERSION));
 		}
 
 		@Override
