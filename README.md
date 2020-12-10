@@ -1,6 +1,7 @@
 Bouncing Block Mod
 ==========
 Source code, textures, etc. of the Bouncing Block Mod Provided to you to help make the Mod better :)
+Link to PMC Listing: https://www.planetminecraft.com/mod/bouncing-block-mod/
 Link to mod: http://adf.ly/T0K1G
 Do NOT redistribute any of this code as your own in anyway.
 Do NOT reupload this code to any site besides this github repo, unless I give you permission, in anyway.
