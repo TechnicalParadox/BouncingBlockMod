@@ -1,11 +1,33 @@
-Bouncing Block Mod
-==========
-Source code, textures, etc. of the Bouncing Block Mod Provided to you to help make the Mod better :)
-Link to PMC Listing: https://www.planetminecraft.com/mod/bouncing-block-mod/
-Link to mod: http://adf.ly/T0K1G
-Do NOT redistribute any of this code as your own in anyway.
-Do NOT reupload this code to any site besides this github repo, unless I give you permission, in anyway.
-Do NOT post any download links to the mod.
-If you would like to share this mod, post a Link to the Planet Minecraft Topic.
-This code is provided to be viewed by you for educational purposes as well as helping with bug fixes, new features, etc.
-Copyright @2013 by TechnicalParadox
+# Bouncing Blocks Mod
+##### This mod currently adds 5 new blocks to the game, the Bouncing Block, Padding Block, Launcher Block, Speed Block, and the Cannon Block. This allows for more possibilities in your Minecraft world! The blocks can be easily avoided by walking on the edges, but can also be covered by carpets if you want to make a trap!
+### License
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+*Click link for license details.*
+
+---------------
+## Table of Contents:
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Contribution Guidelines](#contribution-guidelines)
+* [Questions](#questions)
+---------------
+## Installation:
+1. Download the .zip. 2. Navigate to your .minecraft folder. 3. Open the mods folder. 4. Place the .zip in the mods folder. 5. Enjoy
+## Usage
+Adds functionality to the game of Minecraft.
+
+![A picture of the blocks added by the mod.](./showcase.jpg)
+
+## Credits
+[Giamo Lao](https://www.github.com/technicalparadox)
+[Przemek Jagielski](https://github.com/Gim949)
+## Contribution Guidelines
+[The Contributor Covenant](https://www.contributor-covenant.org/)
+## Questions
+Any questions should be directed to 
+
+[Giamo Lao](https://technicalparadox.github.io)
+
+[giamolao98@gmail.com](mailto:https://technicalparadox.github.io)
