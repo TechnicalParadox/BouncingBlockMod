@@ -22,6 +22,7 @@ Adds functionality to the game of Minecraft.
 
 ## Credits
 [Giamo Lao](https://www.github.com/technicalparadox)
+
 [Przemek Jagielski](https://github.com/Gim949)
 ## Contribution Guidelines
 [The Contributor Covenant](https://www.contributor-covenant.org/)
