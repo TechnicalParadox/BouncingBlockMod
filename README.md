@@ -14,7 +14,11 @@
 * [Questions](#questions)
 ---------------
 ## Installation:
-1. Download the .zip. 2. Navigate to your .minecraft folder. 3. Open the mods folder. 4. Place the .zip in the mods folder. 5. Enjoy
+1. Download the .zip.
+2. Navigate to your .minecraft folder.
+3. Open the mods folder.
+4. Place the .zip in the mods folder.
+5. Enjoy
 ## Usage
 Adds functionality to the game of Minecraft.
 
